@@ -1,6 +1,10 @@
 class Triangle
   
+<<<<<<< HEAD
   attr_accessor :s1, :s2, :s3
+=======
+  attr_accessor :s1, :s2, :s3, :kind
+>>>>>>> 5fab9fce122897bdf72afc4f2c503fc495d2f7cf
   
   def initialize(s1, s2, s3)
     @s1 = s1
@@ -10,6 +14,7 @@ class Triangle
   
   def kind 
     if (s1 * s2 * s3) == 0 || (s1 + s2) <= s3 || (s2 + s3) <= s1 || (s3 + s1) <= s2
+<<<<<<< HEAD
   
     raise TriangleError
     #puts error.message
@@ -36,6 +41,30 @@ class Triangle
   end  
 
 end 
+=======
+     begin
+    raise TriangleError
+    puts error.message
+  end
+  
+  elsif s1 == s2 && s1 == s3
+  self.kind = :equilateral
+  
+  elsif s1 == s2 || s1 == s3 || s2 == s3
+  self.kind = :isosceles
+  
+ else 
+   self.kind = :scalene
+  
+    end   
+  end
+end 
+    
+
+
+  class TriangleError < StandardError
+    
+>>>>>>> 5fab9fce122897bdf72afc4f2c503fc495d2f7cf
 end 
     
   
